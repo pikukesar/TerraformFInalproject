@@ -52,3 +52,11 @@ module "publicip" {
   resource_type    = "publicip"
   resource_group   = "${module.resource_group.resource_group_name}"
 }
+  module "vm" {
+  source           = "./modules/vm"
+  #location         = var.location
+  #application_type = var.application_type
+  #resource_type    = "publicip"
+  public_ip_address_id =module.publicip.public_ip_address_id
+  #resource_group   = module.resource_group.resource_group_name
+    }
