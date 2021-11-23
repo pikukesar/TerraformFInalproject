@@ -54,9 +54,8 @@ module "publicip" {
 }
   module "vm" {
   source           = "./modules/vm"
-  #location         = var.location
-  #application_type = var.application_type
-  #resource_type    = "publicip"
+ source           = "./modules/vm"
+  location         = var.location
+  resource_group_name  = module.resource_group.resource_group_name
   public_ip_address_id =module.publicip.public_ip_address_id
-  #resource_group   = module.resource_group.resource_group_name
-    }
+   }
