@@ -16,6 +16,7 @@ Final Submissing for code
  
  Once the build pipeline ran successfull we will build the push triggerd release pipeline
  
+![DotnetCode to dev.azure.com](https://github.com/pikukesar/TerraformFInalproject/blob/main/Screen%20Shots/Passed%20Test.png) 
  
 ## Created Release Pipeline : Stage 1 and Stage2 
 
