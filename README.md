@@ -26,3 +26,13 @@ Successfully Ran Release Pipeline
 
 ![Ran Release Pipeline](https://github.com/pikukesar/flask-ml-azure-serverless-demo/blob/92b2885122102fc7b6a1d6cb21f748e16737b521/Screen%20Shot%202021-11-06%20at%2012.24.46%20PM.png)
  
+ Uploading the code to the Webapp on Azure 
+ 
+ ![Uploading the code to the Webapp on Azure ](https://github.com/pikukesar/flask-ml-azure-serverless-demo/blob/92b2885122102fc7b6a1d6cb21f748e16737b521/Screen%20Shot%202021-11-06%20at%2012.24.46%20PM.png)
+ 
+ 
+Application Running on the Webapp service
+ 
+ ![Application Running on the Webapp service ](https://github.com/pikukesar/flask-ml-azure-serverless-demo/blob/92b2885122102fc7b6a1d6cb21f748e16737b521/Screen%20Shot%202021-11-06%20at%2012.24.46%20PM.png)
+ 
+ 
