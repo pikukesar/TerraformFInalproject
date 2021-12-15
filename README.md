@@ -1,5 +1,23 @@
 # TerraformFInalproject
 
+Terraform CICD pipeline
+
+
+## Terraform Release pipeline
+
+![Terraform Release pipeline](https://github.com/pikukesar/TerraformFInalproject/blob/main/Terraform%20Pipeline%20Screen%20shots/Created%20Terraform%20release%20pipeline.png)
+
+
+## Terraform Release pipeline run
+
+![Terraform Release pipeline run](https://github.com/pikukesar/TerraformFInalproject/blob/main/Terraform%20Pipeline%20Screen%20shots/Completed%20Running%20pipeline%20%20Successfully.png)
+
+(https://github.com/pikukesar/TerraformFInalproject/blob/main/Terraform%20Pipeline%20Screen%20shots/Complete%20agent%20run.png)
+
+## Resources Created on Azure
+
+![Resources Created on Azure](https://github.com/pikukesar/TerraformFInalproject/blob/main/Terraform%20Pipeline%20Screen%20shots/ResourcesCreated.png)
+
 Final Submissing for code 
 
 ## Importing the DotnetCode to dev.azure.com
