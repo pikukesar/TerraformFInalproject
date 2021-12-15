@@ -1,0 +1,729 @@
+2021-12-15T20:37:58.4190752Z ##[section]Starting: Terraform : apply
+2021-12-15T20:37:58.4392943Z ==============================================================================
+2021-12-15T20:37:58.4393348Z Task         : Terraform
+2021-12-15T20:37:58.4393780Z Description  : Execute terraform commands to manage resources on AzureRM, Amazon Web Services(AWS) and Google Cloud Platform(GCP)
+2021-12-15T20:37:58.4394425Z Version      : 2.197.1
+2021-12-15T20:37:58.4394710Z Author       : Microsoft Corporation
+2021-12-15T20:37:58.4395070Z Help         : [Learn more about this task](https://aka.ms/AAese2w)
+2021-12-15T20:37:58.4395478Z ==============================================================================
+2021-12-15T20:37:58.8735266Z [command]C:\hostedtoolcache\windows\terraform\1.0.11\x64\terraform.exe providers
+2021-12-15T20:38:00.3812832Z 
+2021-12-15T20:38:00.3822712Z Providers required by configuration:
+2021-12-15T20:38:00.3824651Z .
+2021-12-15T20:38:00.3825748Z ├── provider[registry.terraform.io/hashicorp/azurerm]
+2021-12-15T20:38:00.3827447Z ├── module.appservice
+2021-12-15T20:38:00.3829535Z │   └── provider[registry.terraform.io/hashicorp/azurerm]
+2021-12-15T20:38:00.3830629Z ├── module.network
+2021-12-15T20:38:00.3832035Z │   └── provider[registry.terraform.io/hashicorp/azurerm]
+2021-12-15T20:38:00.3833417Z ├── module.nsg-test
+2021-12-15T20:38:00.3834531Z │   └── provider[registry.terraform.io/hashicorp/azurerm]
+2021-12-15T20:38:00.3835801Z ├── module.publicip
+2021-12-15T20:38:00.3837889Z │   └── provider[registry.terraform.io/hashicorp/azurerm]
+2021-12-15T20:38:00.3840088Z ├── module.resource_group
+2021-12-15T20:38:00.3841527Z │   └── provider[registry.terraform.io/hashicorp/azurerm]
+2021-12-15T20:38:00.3842707Z └── module.vm
+2021-12-15T20:38:00.3843909Z     └── provider[registry.terraform.io/hashicorp/azurerm]
+2021-12-15T20:38:00.3844703Z 
+2021-12-15T20:38:00.3845633Z Providers required by state:
+2021-12-15T20:38:00.3845930Z 
+2021-12-15T20:38:00.3846482Z     provider[registry.terraform.io/hashicorp/azurerm]
+2021-12-15T20:38:00.3846906Z 
+2021-12-15T20:38:00.3861403Z [command]C:\hostedtoolcache\windows\terraform\1.0.11\x64\terraform.exe validate
+2021-12-15T20:38:02.9867911Z [32m[1mSuccess![0m The configuration is valid.
+2021-12-15T20:38:02.9868781Z [0m
+2021-12-15T20:38:03.0234111Z [command]C:\hostedtoolcache\windows\terraform\1.0.11\x64\terraform.exe apply -var-file=terraform.tfvars -auto-approve
+2021-12-15T20:38:12.8618249Z [0m[1mmodule.resource_group.azurerm_resource_group.test: Refreshing state... [id=/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg][0m
+2021-12-15T20:38:12.9437211Z [0m[1mmodule.appservice.azurerm_app_service_plan.test: Refreshing state... [id=/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Web/serverfarms/myApplicationUdacityDemoPkesar-AppService][0m
+2021-12-15T20:38:12.9440658Z [0m[1mmodule.network.azurerm_virtual_network.test: Refreshing state... [id=/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myApplicationUdacityDemoPkesar-NET][0m
+2021-12-15T20:38:12.9453221Z [0m[1mmodule.nsg-test.azurerm_network_security_group.nsg: Refreshing state... [id=/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/networkSecurityGroups/myApplicationUdacityDemoPkesar-NSG][0m
+2021-12-15T20:38:12.9456103Z [0m[1mmodule.publicip.azurerm_public_ip.test: Refreshing state... [id=/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/publicIPAddresses/myApplicationUdacityDemoPkesar-publicip-pubip][0m
+2021-12-15T20:38:13.0412933Z [0m[1mmodule.appservice.azurerm_app_service.test: Refreshing state... [id=/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Web/sites/myApplicationUdacityDemoPkesar-AppService][0m
+2021-12-15T20:38:13.0484696Z [0m[1mmodule.network.azurerm_subnet.test: Refreshing state... [id=/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myApplicationUdacityDemoPkesar-NET/subnets/myApplicationUdacityDemoPkesar-NET-sub][0m
+2021-12-15T20:38:13.2280670Z [0m[1mmodule.nsg-test.azurerm_subnet_network_security_group_association.test: Refreshing state... [id=/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myApplicationUdacityDemoPkesar-NET/subnets/myApplicationUdacityDemoPkesar-NET-sub][0m
+2021-12-15T20:38:13.2314542Z [0m[1mmodule.vm.azurerm_network_interface.main: Refreshing state... [id=/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/networkInterfaces/Kesarwani-NetInterface][0m
+2021-12-15T20:38:13.4012334Z [0m
+2021-12-15T20:38:13.4013318Z [1m[36mNote:[0m[1m Objects have changed outside of Terraform[0m
+2021-12-15T20:38:13.4013817Z 
+2021-12-15T20:38:13.4014526Z [0mTerraform detected the following changes made outside of Terraform since the
+2021-12-15T20:38:13.4015503Z last "terraform apply":
+2021-12-15T20:38:13.4015783Z 
+2021-12-15T20:38:13.4016448Z [1m  # module.publicip.azurerm_public_ip.test[0m has been deleted[0m[0m
+2021-12-15T20:38:13.4017257Z [0m  [31m-[0m[0m resource "azurerm_public_ip" "test" {
+2021-12-15T20:38:13.4018142Z       [31m-[0m [0m[1m[0mallocation_method[0m[0m       = "Dynamic" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4019117Z       [31m-[0m [0m[1m[0mavailability_zone[0m[0m       = "No-Zone" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4020864Z       [31m-[0m [0m[1m[0mid[0m[0m                      = "/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/publicIPAddresses/myApplicationUdacityDemoPkesar-publicip-pubip" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4022251Z       [31m-[0m [0m[1m[0midle_timeout_in_minutes[0m[0m = 4 [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4022870Z       [31m-[0m [0m[1m[0mip_version[0m[0m              = "IPv4" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4023485Z       [31m-[0m [0m[1m[0mlocation[0m[0m                = "eastus" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4024153Z       [31m-[0m [0m[1m[0mname[0m[0m                    = "myApplicationUdacityDemoPkesar-publicip-pubip" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4024813Z       [31m-[0m [0m[1m[0mresource_group_name[0m[0m     = "rg" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4025411Z       [31m-[0m [0m[1m[0msku[0m[0m                     = "Basic" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4026001Z       [31m-[0m [0m[1m[0msku_tier[0m[0m                = "Regional" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4026748Z       [31m-[0m [0m[1m[0mzones[0m[0m                   = [] [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4027157Z     }
+2021-12-15T20:38:13.4027561Z [1m  # module.resource_group.azurerm_resource_group.test[0m has been deleted[0m[0m
+2021-12-15T20:38:13.4028063Z [0m  [31m-[0m[0m resource "azurerm_resource_group" "test" {
+2021-12-15T20:38:13.4028834Z       [31m-[0m [0m[1m[0mid[0m[0m       = "/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4029492Z       [31m-[0m [0m[1m[0mlocation[0m[0m = "eastus" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4030041Z       [31m-[0m [0m[1m[0mname[0m[0m     = "rg" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4030789Z     }
+2021-12-15T20:38:13.4031506Z [1m  # module.vm.azurerm_network_interface.main[0m has been deleted[0m[0m
+2021-12-15T20:38:13.4032033Z [0m  [31m-[0m[0m resource "azurerm_network_interface" "main" {
+2021-12-15T20:38:13.4032579Z       [31m-[0m [0m[1m[0mapplied_dns_servers[0m[0m           = [] [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4033183Z       [31m-[0m [0m[1m[0mdns_servers[0m[0m                   = [] [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4034828Z       [31m-[0m [0m[1m[0menable_accelerated_networking[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4035442Z       [31m-[0m [0m[1m[0menable_ip_forwarding[0m[0m          = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4036306Z       [31m-[0m [0m[1m[0mid[0m[0m                            = "/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/networkInterfaces/Kesarwani-NetInterface" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4037352Z       [31m-[0m [0m[1m[0minternal_domain_name_suffix[0m[0m   = "zhr5rneaxe3enjgnrmztobpqgf.bx.internal.cloudapp.net" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4038151Z       [31m-[0m [0m[1m[0mlocation[0m[0m                      = "eastus" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4038924Z       [31m-[0m [0m[1m[0mname[0m[0m                          = "Kesarwani-NetInterface" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4039559Z       [31m-[0m [0m[1m[0mprivate_ip_address[0m[0m            = "10.0.1.4" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4040100Z       [31m-[0m [0m[1m[0mprivate_ip_addresses[0m[0m          = [
+2021-12-15T20:38:13.4041084Z           [31m-[0m [0m"10.0.1.4",
+2021-12-15T20:38:13.4041609Z         ] [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4042097Z       [31m-[0m [0m[1m[0mresource_group_name[0m[0m           = "rg" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4042377Z 
+2021-12-15T20:38:13.4042857Z       [31m-[0m [0mip_configuration {
+2021-12-15T20:38:13.4043393Z           [31m-[0m [0m[1m[0mname[0m[0m                          = "internal" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4044016Z           [31m-[0m [0m[1m[0mprimary[0m[0m                       = true [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4044640Z           [31m-[0m [0m[1m[0mprivate_ip_address[0m[0m            = "10.0.1.4" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4045283Z           [31m-[0m [0m[1m[0mprivate_ip_address_allocation[0m[0m = "Dynamic" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4045912Z           [31m-[0m [0m[1m[0mprivate_ip_address_version[0m[0m    = "IPv4" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4046783Z           [31m-[0m [0m[1m[0mpublic_ip_address_id[0m[0m          = "/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/publicIPAddresses/myApplicationUdacityDemoPkesar-publicip-pubip" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4048129Z           [31m-[0m [0m[1m[0msubnet_id[0m[0m                     = "/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myApplicationUdacityDemoPkesar-NET/subnets/myApplicationUdacityDemoPkesar-NET-sub" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4048867Z         }
+2021-12-15T20:38:13.4049138Z     }
+2021-12-15T20:38:13.4049697Z [1m  # module.appservice.azurerm_app_service_plan.test[0m has been deleted[0m[0m
+2021-12-15T20:38:13.4050175Z [0m  [31m-[0m[0m resource "azurerm_app_service_plan" "test" {
+2021-12-15T20:38:13.4052051Z       [31m-[0m [0m[1m[0mid[0m[0m                           = "/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Web/serverfarms/myApplicationUdacityDemoPkesar-AppService" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4053711Z       [31m-[0m [0m[1m[0mis_xenon[0m[0m                     = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4054422Z       [31m-[0m [0m[1m[0mkind[0m[0m                         = "Windows" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4055049Z       [31m-[0m [0m[1m[0mlocation[0m[0m                     = "eastus" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4055849Z       [31m-[0m [0m[1m[0mmaximum_elastic_worker_count[0m[0m = 1 [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4056441Z       [31m-[0m [0m[1m[0mmaximum_number_of_workers[0m[0m    = 1 [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4058285Z       [31m-[0m [0m[1m[0mname[0m[0m                         = "myApplicationUdacityDemoPkesar-AppService" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4058995Z       [31m-[0m [0m[1m[0mper_site_scaling[0m[0m             = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4059737Z       [31m-[0m [0m[1m[0mreserved[0m[0m                     = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4060651Z       [31m-[0m [0m[1m[0mresource_group_name[0m[0m          = "rg" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4061237Z       [31m-[0m [0m[1m[0mzone_redundant[0m[0m               = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4061499Z 
+2021-12-15T20:38:13.4061799Z       [31m-[0m [0msku {
+2021-12-15T20:38:13.4063050Z           [31m-[0m [0m[1m[0mcapacity[0m[0m = 0 [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4072275Z           [31m-[0m [0m[1m[0msize[0m[0m     = "F1" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4072954Z           [31m-[0m [0m[1m[0mtier[0m[0m     = "Free" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4073426Z         }
+2021-12-15T20:38:13.4073734Z     }
+2021-12-15T20:38:13.4074180Z [1m  # module.appservice.azurerm_app_service.test[0m has been deleted[0m[0m
+2021-12-15T20:38:13.4074713Z [0m  [31m-[0m[0m resource "azurerm_app_service" "test" {
+2021-12-15T20:38:13.4076340Z       [31m-[0m [0m[1m[0mapp_service_plan_id[0m[0m               = "/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Web/serverfarms/myApplicationUdacityDemoPkesar-AppService" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4077505Z       [31m-[0m [0m[1m[0mapp_settings[0m[0m                      = {
+2021-12-15T20:38:13.4078574Z           [31m-[0m [0m"WEBSITE_RUN_FROM_PACKAGE" = "0"
+2021-12-15T20:38:13.4082018Z         } [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4082720Z       [31m-[0m [0m[1m[0mclient_affinity_enabled[0m[0m           = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4083308Z       [31m-[0m [0m[1m[0mclient_cert_enabled[0m[0m               = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4084112Z       [31m-[0m [0m[1m[0mclient_cert_mode[0m[0m                  = "Required" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4084863Z       [31m-[0m [0m[1m[0mcustom_domain_verification_id[0m[0m     = "BCB7FD56B69879CE4268564A857EE0C4E82FAA92708E47113990FEE829E5B5DA" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4085672Z       [31m-[0m [0m[1m[0mdefault_site_hostname[0m[0m             = "myapplicationudacitydemopkesar-appservice.azurewebsites.net" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4086845Z       [31m-[0m [0m[1m[0menabled[0m[0m                           = true [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4087656Z       [31m-[0m [0m[1m[0mhttps_only[0m[0m                        = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4092452Z       [31m-[0m [0m[1m[0mid[0m[0m                                = "/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Web/sites/myApplicationUdacityDemoPkesar-AppService" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4093349Z       [31m-[0m [0m[1m[0mkey_vault_reference_identity_id[0m[0m   = "SystemAssigned" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4094177Z       [31m-[0m [0m[1m[0mlocation[0m[0m                          = "eastus" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4094841Z       [31m-[0m [0m[1m[0mname[0m[0m                              = "myApplicationUdacityDemoPkesar-AppService" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4098700Z       [31m-[0m [0m[1m[0moutbound_ip_address_list[0m[0m          = [
+2021-12-15T20:38:13.4099221Z           [31m-[0m [0m"52.191.230.24",
+2021-12-15T20:38:13.4099624Z           [31m-[0m [0m"52.191.230.56",
+2021-12-15T20:38:13.4100005Z           [31m-[0m [0m"52.191.230.66",
+2021-12-15T20:38:13.4100759Z           [31m-[0m [0m"52.191.230.113",
+2021-12-15T20:38:13.4101491Z           [31m-[0m [0m"52.191.230.143",
+2021-12-15T20:38:13.4101919Z           [31m-[0m [0m"52.191.230.201",
+2021-12-15T20:38:13.4102324Z           [31m-[0m [0m"20.49.104.1",
+2021-12-15T20:38:13.4102912Z         ] [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4104773Z       [31m-[0m [0m[1m[0moutbound_ip_addresses[0m[0m             = "52.191.230.24,52.191.230.56,52.191.230.66,52.191.230.113,52.191.230.143,52.191.230.201,20.49.104.1" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4105688Z       [31m-[0m [0m[1m[0mpossible_outbound_ip_address_list[0m[0m = [
+2021-12-15T20:38:13.4106143Z           [31m-[0m [0m"52.191.230.24",
+2021-12-15T20:38:13.4106522Z           [31m-[0m [0m"52.191.230.56",
+2021-12-15T20:38:13.4106882Z           [31m-[0m [0m"52.191.230.66",
+2021-12-15T20:38:13.4107261Z           [31m-[0m [0m"52.191.230.113",
+2021-12-15T20:38:13.4107643Z           [31m-[0m [0m"52.191.230.143",
+2021-12-15T20:38:13.4108022Z           [31m-[0m [0m"52.191.230.201",
+2021-12-15T20:38:13.4108382Z           [31m-[0m [0m"52.191.229.166",
+2021-12-15T20:38:13.4108764Z           [31m-[0m [0m"52.191.230.225",
+2021-12-15T20:38:13.4109143Z           [31m-[0m [0m"52.191.231.4",
+2021-12-15T20:38:13.4109709Z           [31m-[0m [0m"52.191.231.9",
+2021-12-15T20:38:13.4110099Z           [31m-[0m [0m"52.191.231.117",
+2021-12-15T20:38:13.4110831Z           [31m-[0m [0m"52.191.231.127",
+2021-12-15T20:38:13.4111564Z           [31m-[0m [0m"52.146.59.158",
+2021-12-15T20:38:13.4112048Z           [31m-[0m [0m"52.149.199.206",
+2021-12-15T20:38:13.4112441Z           [31m-[0m [0m"52.152.248.4",
+2021-12-15T20:38:13.4112831Z           [31m-[0m [0m"52.190.39.198",
+2021-12-15T20:38:13.4113204Z           [31m-[0m [0m"52.224.18.53",
+2021-12-15T20:38:13.4113590Z           [31m-[0m [0m"52.224.21.12",
+2021-12-15T20:38:13.4113977Z           [31m-[0m [0m"52.224.22.32",
+2021-12-15T20:38:13.4114365Z           [31m-[0m [0m"52.224.22.193",
+2021-12-15T20:38:13.4114737Z           [31m-[0m [0m"52.224.248.97",
+2021-12-15T20:38:13.4115130Z           [31m-[0m [0m"52.224.248.203",
+2021-12-15T20:38:13.4115674Z           [31m-[0m [0m"52.224.249.248",
+2021-12-15T20:38:13.4116065Z           [31m-[0m [0m"52.224.251.15",
+2021-12-15T20:38:13.4116439Z           [31m-[0m [0m"52.191.231.143",
+2021-12-15T20:38:13.4116799Z           [31m-[0m [0m"52.191.231.185",
+2021-12-15T20:38:13.4117177Z           [31m-[0m [0m"52.191.231.205",
+2021-12-15T20:38:13.4117611Z           [31m-[0m [0m"40.88.202.205",
+2021-12-15T20:38:13.4117999Z           [31m-[0m [0m"40.88.202.218",
+2021-12-15T20:38:13.4118356Z           [31m-[0m [0m"40.88.202.219",
+2021-12-15T20:38:13.4118727Z           [31m-[0m [0m"20.49.104.1",
+2021-12-15T20:38:13.4119105Z         ] [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4120855Z       [31m-[0m [0m[1m[0mpossible_outbound_ip_addresses[0m[0m    = "52.191.230.24,52.191.230.56,52.191.230.66,52.191.230.113,52.191.230.143,52.191.230.201,52.191.229.166,52.191.230.225,52.191.231.4,52.191.231.9,52.191.231.117,52.191.231.127,52.146.59.158,52.149.199.206,52.152.248.4,52.190.39.198,52.224.18.53,52.224.21.12,52.224.22.32,52.224.22.193,52.224.248.97,52.224.248.203,52.224.249.248,52.224.251.15,52.191.231.143,52.191.231.185,52.191.231.205,40.88.202.205,40.88.202.218,40.88.202.219,20.49.104.1" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4122436Z       [31m-[0m [0m[1m[0mresource_group_name[0m[0m               = "rg" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4123705Z       [31m-[0m [0m[1m[0msite_credential[0m[0m                   = [
+2021-12-15T20:38:13.4124132Z           [31m-[0m [0m{
+2021-12-15T20:38:13.4124609Z               [31m-[0m [0mpassword = "4Q4YqEzr60jgZQauogQbCDHTScslb5SbbfoSyart93q7wnG5DkoJ9vQdNJlY"
+2021-12-15T20:38:13.4125156Z               [31m-[0m [0musername = "$myApplicationUdacityDemoPkesar-AppService"
+2021-12-15T20:38:13.4125578Z             },
+2021-12-15T20:38:13.4125931Z         ] [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4126111Z 
+2021-12-15T20:38:13.4126432Z       [31m-[0m [0mauth_settings {
+2021-12-15T20:38:13.4127082Z           [31m-[0m [0m[1m[0madditional_login_params[0m[0m        = {} [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4127852Z           [31m-[0m [0m[1m[0mallowed_external_redirect_urls[0m[0m = [] [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4128440Z           [31m-[0m [0m[1m[0menabled[0m[0m                        = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4129050Z           [31m-[0m [0m[1m[0mtoken_refresh_extension_hours[0m[0m  = 0 [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4129649Z           [31m-[0m [0m[1m[0mtoken_store_enabled[0m[0m            = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4130087Z         }
+2021-12-15T20:38:13.4130204Z 
+2021-12-15T20:38:13.4131031Z       [31m-[0m [0mlogs {
+2021-12-15T20:38:13.4132022Z           [31m-[0m [0m[1m[0mdetailed_error_messages_enabled[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4132756Z           [31m-[0m [0m[1m[0mfailed_request_tracing_enabled[0m[0m  = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4133063Z 
+2021-12-15T20:38:13.4133391Z           [31m-[0m [0mapplication_logs {
+2021-12-15T20:38:13.4133894Z               [31m-[0m [0m[1m[0mfile_system_level[0m[0m = "Off" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4134323Z             }
+2021-12-15T20:38:13.4134475Z 
+2021-12-15T20:38:13.4134772Z           [31m-[0m [0mhttp_logs {
+2021-12-15T20:38:13.4135112Z             }
+2021-12-15T20:38:13.4135401Z         }
+2021-12-15T20:38:13.4135523Z 
+2021-12-15T20:38:13.4135834Z       [31m-[0m [0msite_config {
+2021-12-15T20:38:13.4136347Z           [31m-[0m [0m[1m[0macr_use_managed_identity_credentials[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4136990Z           [31m-[0m [0m[1m[0malways_on[0m[0m                            = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4137732Z           [31m-[0m [0m[1m[0mdefault_documents[0m[0m                    = [
+2021-12-15T20:38:13.4138167Z               [31m-[0m [0m"Default.htm",
+2021-12-15T20:38:13.4138555Z               [31m-[0m [0m"Default.html",
+2021-12-15T20:38:13.4138941Z               [31m-[0m [0m"Default.asp",
+2021-12-15T20:38:13.4139319Z               [31m-[0m [0m"index.htm",
+2021-12-15T20:38:13.4139863Z               [31m-[0m [0m"index.html",
+2021-12-15T20:38:13.4140273Z               [31m-[0m [0m"iisstart.htm",
+2021-12-15T20:38:13.4141218Z               [31m-[0m [0m"default.aspx",
+2021-12-15T20:38:13.4141732Z               [31m-[0m [0m"index.php",
+2021-12-15T20:38:13.4142137Z               [31m-[0m [0m"hostingstart.html",
+2021-12-15T20:38:13.4142536Z             ] [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4143401Z           [31m-[0m [0m[1m[0mdotnet_framework_version[0m[0m             = "v4.0" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4144289Z           [31m-[0m [0m[1m[0mftps_state[0m[0m                           = "AllAllowed" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4145375Z           [31m-[0m [0m[1m[0mhttp2_enabled[0m[0m                        = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4146573Z           [31m-[0m [0m[1m[0mip_restriction[0m[0m                       = [] [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4147703Z           [31m-[0m [0m[1m[0mlocal_mysql_enabled[0m[0m                  = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4148807Z           [31m-[0m [0m[1m[0mmanaged_pipeline_mode[0m[0m                = "Integrated" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4150027Z           [31m-[0m [0m[1m[0mmin_tls_version[0m[0m                      = "1.2" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4151478Z           [31m-[0m [0m[1m[0mnumber_of_workers[0m[0m                    = 1 [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4152126Z           [31m-[0m [0m[1m[0mphp_version[0m[0m                          = "5.6" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4152959Z           [31m-[0m [0m[1m[0mremote_debugging_enabled[0m[0m             = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4153633Z           [31m-[0m [0m[1m[0mscm_ip_restriction[0m[0m                   = [] [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4156073Z           [31m-[0m [0m[1m[0mscm_type[0m[0m                             = "None" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4157222Z           [31m-[0m [0m[1m[0mscm_use_main_ip_restriction[0m[0m          = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4158349Z           [31m-[0m [0m[1m[0muse_32_bit_worker_process[0m[0m            = true [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4159069Z           [31m-[0m [0m[1m[0mvnet_route_all_enabled[0m[0m               = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4159875Z           [31m-[0m [0m[1m[0mwebsockets_enabled[0m[0m                   = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4160339Z         }
+2021-12-15T20:38:13.4160457Z 
+2021-12-15T20:38:13.4161129Z       [31m-[0m [0msource_control {
+2021-12-15T20:38:13.4162092Z           [31m-[0m [0m[1m[0mbranch[0m[0m             = "master" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4163092Z           [31m-[0m [0m[1m[0mmanual_integration[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4163726Z           [31m-[0m [0m[1m[0mrollback_enabled[0m[0m   = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4164313Z           [31m-[0m [0m[1m[0muse_mercurial[0m[0m      = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4164741Z         }
+2021-12-15T20:38:13.4165024Z     }
+2021-12-15T20:38:13.4165675Z [1m  # module.network.azurerm_subnet.test[0m has been deleted[0m[0m
+2021-12-15T20:38:13.4166505Z [0m  [31m-[0m[0m resource "azurerm_subnet" "test" {
+2021-12-15T20:38:13.4167474Z       [31m-[0m [0m[1m[0maddress_prefix[0m[0m                                 = "10.0.1.0/24" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4168345Z       [31m-[0m [0m[1m[0maddress_prefixes[0m[0m                               = [
+2021-12-15T20:38:13.4169111Z           [31m-[0m [0m"10.0.1.0/24",
+2021-12-15T20:38:13.4169604Z         ] [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4170522Z       [31m-[0m [0m[1m[0menforce_private_link_endpoint_network_policies[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4171496Z       [31m-[0m [0m[1m[0menforce_private_link_service_network_policies[0m[0m  = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4172641Z       [31m-[0m [0m[1m[0mid[0m[0m                                             = "/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myApplicationUdacityDemoPkesar-NET/subnets/myApplicationUdacityDemoPkesar-NET-sub" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4182919Z       [31m-[0m [0m[1m[0mname[0m[0m                                           = "myApplicationUdacityDemoPkesar-NET-sub" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4184718Z       [31m-[0m [0m[1m[0mresource_group_name[0m[0m                            = "rg" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4185734Z       [31m-[0m [0m[1m[0mvirtual_network_name[0m[0m                           = "myApplicationUdacityDemoPkesar-NET" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4189261Z     }
+2021-12-15T20:38:13.4189726Z [1m  # module.network.azurerm_virtual_network.test[0m has been deleted[0m[0m
+2021-12-15T20:38:13.4191695Z [0m  [31m-[0m[0m resource "azurerm_virtual_network" "test" {
+2021-12-15T20:38:13.4194391Z       [31m-[0m [0m[1m[0maddress_space[0m[0m           = [
+2021-12-15T20:38:13.4194862Z           [31m-[0m [0m"10.0.1.0/24",
+2021-12-15T20:38:13.4195461Z         ] [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4199073Z       [31m-[0m [0m[1m[0mdns_servers[0m[0m             = [] [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4199729Z       [31m-[0m [0m[1m[0mflow_timeout_in_minutes[0m[0m = 0 [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4200394Z       [31m-[0m [0m[1m[0mguid[0m[0m                    = "b4f8e3c9-b980-463a-a4cd-8b333705f035" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4201934Z       [31m-[0m [0m[1m[0mid[0m[0m                      = "/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myApplicationUdacityDemoPkesar-NET" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4203034Z       [31m-[0m [0m[1m[0mlocation[0m[0m                = "eastus" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4203678Z       [31m-[0m [0m[1m[0mname[0m[0m                    = "myApplicationUdacityDemoPkesar-NET" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4205422Z       [31m-[0m [0m[1m[0mresource_group_name[0m[0m     = "rg" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4206062Z       [31m-[0m [0m[1m[0msubnet[0m[0m                  = [] [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4207595Z       [31m-[0m [0m[1m[0mvm_protection_enabled[0m[0m   = false [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4208169Z     }
+2021-12-15T20:38:13.4209479Z [1m  # module.nsg-test.azurerm_network_security_group.nsg[0m has been deleted[0m[0m
+2021-12-15T20:38:13.4210626Z [0m  [31m-[0m[0m resource "azurerm_network_security_group" "nsg" {
+2021-12-15T20:38:13.4212898Z       [31m-[0m [0m[1m[0mid[0m[0m                  = "/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/networkSecurityGroups/myApplicationUdacityDemoPkesar-NSG" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4213792Z       [31m-[0m [0m[1m[0mlocation[0m[0m            = "eastus" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4214443Z       [31m-[0m [0m[1m[0mname[0m[0m                = "myApplicationUdacityDemoPkesar-NSG" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4215073Z       [31m-[0m [0m[1m[0mresource_group_name[0m[0m = "rg" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4215595Z       [31m-[0m [0m[1m[0msecurity_rule[0m[0m       = [
+2021-12-15T20:38:13.4215980Z           [31m-[0m [0m{
+2021-12-15T20:38:13.4220321Z               [31m-[0m [0maccess                                     = "Allow"
+2021-12-15T20:38:13.4221448Z               [31m-[0m [0mdescription                                = ""
+2021-12-15T20:38:13.4222320Z               [31m-[0m [0mdestination_address_prefix                 = "*"
+2021-12-15T20:38:13.4223188Z               [31m-[0m [0mdestination_address_prefixes               = []
+2021-12-15T20:38:13.4224924Z               [31m-[0m [0mdestination_application_security_group_ids = []
+2021-12-15T20:38:13.4225494Z               [31m-[0m [0mdestination_port_range                     = "22"
+2021-12-15T20:38:13.4226006Z               [31m-[0m [0mdestination_port_ranges                    = []
+2021-12-15T20:38:13.4227723Z               [31m-[0m [0mdirection                                  = "Inbound"
+2021-12-15T20:38:13.4230861Z               [31m-[0m [0mname                                       = "SSH"
+2021-12-15T20:38:13.4231707Z               [31m-[0m [0mpriority                                   = 1001
+2021-12-15T20:38:13.4232258Z               [31m-[0m [0mprotocol                                   = "Tcp"
+2021-12-15T20:38:13.4232765Z               [31m-[0m [0msource_address_prefix                      = "*"
+2021-12-15T20:38:13.4233279Z               [31m-[0m [0msource_address_prefixes                    = []
+2021-12-15T20:38:13.4233791Z               [31m-[0m [0msource_application_security_group_ids      = []
+2021-12-15T20:38:13.4234477Z               [31m-[0m [0msource_port_range                          = "*"
+2021-12-15T20:38:13.4234989Z               [31m-[0m [0msource_port_ranges                         = []
+2021-12-15T20:38:13.4236552Z             },
+2021-12-15T20:38:13.4238666Z           [31m-[0m [0m{
+2021-12-15T20:38:13.4240882Z               [31m-[0m [0maccess                                     = "Allow"
+2021-12-15T20:38:13.4241647Z               [31m-[0m [0mdescription                                = ""
+2021-12-15T20:38:13.4242525Z               [31m-[0m [0mdestination_address_prefix                 = "*"
+2021-12-15T20:38:13.4243087Z               [31m-[0m [0mdestination_address_prefixes               = []
+2021-12-15T20:38:13.4243597Z               [31m-[0m [0mdestination_application_security_group_ids = []
+2021-12-15T20:38:13.4244110Z               [31m-[0m [0mdestination_port_range                     = "5000"
+2021-12-15T20:38:13.4244606Z               [31m-[0m [0mdestination_port_ranges                    = []
+2021-12-15T20:38:13.4245141Z               [31m-[0m [0mdirection                                  = "Inbound"
+2021-12-15T20:38:13.4245721Z               [31m-[0m [0mname                                       = "myApplicationUdacityDemoPkesar-NSG-5000"
+2021-12-15T20:38:13.4246294Z               [31m-[0m [0mpriority                                   = 100
+2021-12-15T20:38:13.4249089Z               [31m-[0m [0mprotocol                                   = "Tcp"
+2021-12-15T20:38:13.4249672Z               [31m-[0m [0msource_address_prefix                      = "10.0.1.0/24"
+2021-12-15T20:38:13.4250546Z               [31m-[0m [0msource_address_prefixes                    = []
+2021-12-15T20:38:13.4251440Z               [31m-[0m [0msource_application_security_group_ids      = []
+2021-12-15T20:38:13.4251982Z               [31m-[0m [0msource_port_range                          = "*"
+2021-12-15T20:38:13.4252494Z               [31m-[0m [0msource_port_ranges                         = []
+2021-12-15T20:38:13.4252910Z             },
+2021-12-15T20:38:13.4253247Z         ] [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4253589Z     }
+2021-12-15T20:38:13.4254043Z [1m  # module.nsg-test.azurerm_subnet_network_security_group_association.test[0m has been deleted[0m[0m
+2021-12-15T20:38:13.4256418Z [0m  [31m-[0m[0m resource "azurerm_subnet_network_security_group_association" "test" {
+2021-12-15T20:38:13.4259188Z       [31m-[0m [0m[1m[0mid[0m[0m                        = "/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myApplicationUdacityDemoPkesar-NET/subnets/myApplicationUdacityDemoPkesar-NET-sub" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4260819Z       [31m-[0m [0m[1m[0mnetwork_security_group_id[0m[0m = "/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/networkSecurityGroups/myApplicationUdacityDemoPkesar-NSG" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4262358Z       [31m-[0m [0m[1m[0msubnet_id[0m[0m                 = "/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myApplicationUdacityDemoPkesar-NET/subnets/myApplicationUdacityDemoPkesar-NET-sub" [90m->[0m [0m[90mnull[0m[0m
+2021-12-15T20:38:13.4265142Z     }
+2021-12-15T20:38:13.4265305Z 
+2021-12-15T20:38:13.4265690Z Unless you have made equivalent changes to your configuration, or ignored the
+2021-12-15T20:38:13.4266214Z relevant attributes using ignore_changes, the following plan may include
+2021-12-15T20:38:13.4267749Z actions to undo or respond to these changes.
+2021-12-15T20:38:13.4269177Z [90m
+2021-12-15T20:38:13.4271130Z ─────────────────────────────────────────────────────────────────────────────[0m
+2021-12-15T20:38:13.4271559Z 
+2021-12-15T20:38:13.4272074Z Terraform used the selected providers to generate the following execution
+2021-12-15T20:38:13.4272870Z plan. Resource actions are indicated with the following symbols:
+2021-12-15T20:38:13.4273310Z   [32m+[0m create
+2021-12-15T20:38:13.4273606Z [0m
+2021-12-15T20:38:13.4273967Z Terraform will perform the following actions:
+2021-12-15T20:38:13.4274168Z 
+2021-12-15T20:38:13.4274856Z [1m  # module.appservice.azurerm_app_service.test[0m will be created[0m[0m
+2021-12-15T20:38:13.4275388Z [0m  [32m+[0m[0m resource "azurerm_app_service" "test" {
+2021-12-15T20:38:13.4275906Z       [32m+[0m [0m[1m[0mapp_service_plan_id[0m[0m               = (known after apply)
+2021-12-15T20:38:13.4276425Z       [32m+[0m [0m[1m[0mapp_settings[0m[0m                      = {
+2021-12-15T20:38:13.4279520Z           [32m+[0m [0m"WEBSITE_RUN_FROM_PACKAGE" = "0"
+2021-12-15T20:38:13.4280084Z         }
+2021-12-15T20:38:13.4281124Z       [32m+[0m [0m[1m[0mclient_affinity_enabled[0m[0m           = false
+2021-12-15T20:38:13.4281754Z       [32m+[0m [0m[1m[0mclient_cert_enabled[0m[0m               = false
+2021-12-15T20:38:13.4282296Z       [32m+[0m [0m[1m[0mclient_cert_mode[0m[0m                  = (known after apply)
+2021-12-15T20:38:13.4282857Z       [32m+[0m [0m[1m[0mcustom_domain_verification_id[0m[0m     = (known after apply)
+2021-12-15T20:38:13.4283427Z       [32m+[0m [0m[1m[0mdefault_site_hostname[0m[0m             = (known after apply)
+2021-12-15T20:38:13.4284120Z       [32m+[0m [0m[1m[0menabled[0m[0m                           = true
+2021-12-15T20:38:13.4284615Z       [32m+[0m [0m[1m[0mhttps_only[0m[0m                        = false
+2021-12-15T20:38:13.4285290Z       [32m+[0m [0m[1m[0mid[0m[0m                                = (known after apply)
+2021-12-15T20:38:13.4285854Z       [32m+[0m [0m[1m[0mkey_vault_reference_identity_id[0m[0m   = (known after apply)
+2021-12-15T20:38:13.4286394Z       [32m+[0m [0m[1m[0mlocation[0m[0m                          = "eastus"
+2021-12-15T20:38:13.4288791Z       [32m+[0m [0m[1m[0mname[0m[0m                              = "myApplicationUdacityDemoPkesar-AppService"
+2021-12-15T20:38:13.4289495Z       [32m+[0m [0m[1m[0moutbound_ip_address_list[0m[0m          = (known after apply)
+2021-12-15T20:38:13.4290051Z       [32m+[0m [0m[1m[0moutbound_ip_addresses[0m[0m             = (known after apply)
+2021-12-15T20:38:13.4291246Z       [32m+[0m [0m[1m[0mpossible_outbound_ip_address_list[0m[0m = (known after apply)
+2021-12-15T20:38:13.4292210Z       [32m+[0m [0m[1m[0mpossible_outbound_ip_addresses[0m[0m    = (known after apply)
+2021-12-15T20:38:13.4293000Z       [32m+[0m [0m[1m[0mresource_group_name[0m[0m               = "rg"
+2021-12-15T20:38:13.4293550Z       [32m+[0m [0m[1m[0msite_credential[0m[0m                   = (known after apply)
+2021-12-15T20:38:13.4293949Z 
+2021-12-15T20:38:13.4294252Z       [32m+[0m [0mauth_settings {
+2021-12-15T20:38:13.4294711Z           [32m+[0m [0m[1m[0madditional_login_params[0m[0m        = (known after apply)
+2021-12-15T20:38:13.4295256Z           [32m+[0m [0m[1m[0mallowed_external_redirect_urls[0m[0m = (known after apply)
+2021-12-15T20:38:13.4295801Z           [32m+[0m [0m[1m[0mdefault_provider[0m[0m               = (known after apply)
+2021-12-15T20:38:13.4296531Z           [32m+[0m [0m[1m[0menabled[0m[0m                        = (known after apply)
+2021-12-15T20:38:13.4299191Z           [32m+[0m [0m[1m[0missuer[0m[0m                         = (known after apply)
+2021-12-15T20:38:13.4299783Z           [32m+[0m [0m[1m[0mruntime_version[0m[0m                = (known after apply)
+2021-12-15T20:38:13.4300846Z           [32m+[0m [0m[1m[0mtoken_refresh_extension_hours[0m[0m  = (known after apply)
+2021-12-15T20:38:13.4301581Z           [32m+[0m [0m[1m[0mtoken_store_enabled[0m[0m            = (known after apply)
+2021-12-15T20:38:13.4302161Z           [32m+[0m [0m[1m[0munauthenticated_client_action[0m[0m  = (known after apply)
+2021-12-15T20:38:13.4303071Z 
+2021-12-15T20:38:13.4303404Z           [32m+[0m [0mactive_directory {
+2021-12-15T20:38:13.4303883Z               [32m+[0m [0m[1m[0mallowed_audiences[0m[0m = (known after apply)
+2021-12-15T20:38:13.4304420Z               [32m+[0m [0m[1m[0mclient_id[0m[0m         = (known after apply)
+2021-12-15T20:38:13.4304948Z               [32m+[0m [0m[1m[0mclient_secret[0m[0m     = (sensitive value)
+2021-12-15T20:38:13.4305505Z             }
+2021-12-15T20:38:13.4305630Z 
+2021-12-15T20:38:13.4305932Z           [32m+[0m [0mfacebook {
+2021-12-15T20:38:13.4306346Z               [32m+[0m [0m[1m[0mapp_id[0m[0m       = (known after apply)
+2021-12-15T20:38:13.4308805Z               [32m+[0m [0m[1m[0mapp_secret[0m[0m   = (sensitive value)
+2021-12-15T20:38:13.4309422Z               [32m+[0m [0m[1m[0moauth_scopes[0m[0m = (known after apply)
+2021-12-15T20:38:13.4309831Z             }
+2021-12-15T20:38:13.4309957Z 
+2021-12-15T20:38:13.4310727Z           [32m+[0m [0mgoogle {
+2021-12-15T20:38:13.4311425Z               [32m+[0m [0m[1m[0mclient_id[0m[0m     = (known after apply)
+2021-12-15T20:38:13.4311943Z               [32m+[0m [0m[1m[0mclient_secret[0m[0m = (sensitive value)
+2021-12-15T20:38:13.4312468Z               [32m+[0m [0m[1m[0moauth_scopes[0m[0m  = (known after apply)
+2021-12-15T20:38:13.4312888Z             }
+2021-12-15T20:38:13.4313015Z 
+2021-12-15T20:38:13.4313995Z           [32m+[0m [0mmicrosoft {
+2021-12-15T20:38:13.4314565Z               [32m+[0m [0m[1m[0mclient_id[0m[0m     = (known after apply)
+2021-12-15T20:38:13.4315101Z               [32m+[0m [0m[1m[0mclient_secret[0m[0m = (sensitive value)
+2021-12-15T20:38:13.4315611Z               [32m+[0m [0m[1m[0moauth_scopes[0m[0m  = (known after apply)
+2021-12-15T20:38:13.4317156Z             }
+2021-12-15T20:38:13.4317338Z 
+2021-12-15T20:38:13.4317640Z           [32m+[0m [0mtwitter {
+2021-12-15T20:38:13.4318833Z               [32m+[0m [0m[1m[0mconsumer_key[0m[0m    = (known after apply)
+2021-12-15T20:38:13.4321526Z               [32m+[0m [0m[1m[0mconsumer_secret[0m[0m = (sensitive value)
+2021-12-15T20:38:13.4323119Z             }
+2021-12-15T20:38:13.4323576Z         }
+2021-12-15T20:38:13.4323729Z 
+2021-12-15T20:38:13.4324061Z       [32m+[0m [0mconnection_string {
+2021-12-15T20:38:13.4324507Z           [32m+[0m [0m[1m[0mname[0m[0m  = (known after apply)
+2021-12-15T20:38:13.4324996Z           [32m+[0m [0m[1m[0mtype[0m[0m  = (known after apply)
+2021-12-15T20:38:13.4325469Z           [32m+[0m [0m[1m[0mvalue[0m[0m = (sensitive value)
+2021-12-15T20:38:13.4325850Z         }
+2021-12-15T20:38:13.4326906Z 
+2021-12-15T20:38:13.4327463Z       [32m+[0m [0midentity {
+2021-12-15T20:38:13.4327890Z           [32m+[0m [0m[1m[0midentity_ids[0m[0m = (known after apply)
+2021-12-15T20:38:13.4329282Z           [32m+[0m [0m[1m[0mprincipal_id[0m[0m = (known after apply)
+2021-12-15T20:38:13.4331042Z           [32m+[0m [0m[1m[0mtenant_id[0m[0m    = (known after apply)
+2021-12-15T20:38:13.4331773Z           [32m+[0m [0m[1m[0mtype[0m[0m         = (known after apply)
+2021-12-15T20:38:13.4332176Z         }
+2021-12-15T20:38:13.4332294Z 
+2021-12-15T20:38:13.4332592Z       [32m+[0m [0mlogs {
+2021-12-15T20:38:13.4333056Z           [32m+[0m [0m[1m[0mdetailed_error_messages_enabled[0m[0m = (known after apply)
+2021-12-15T20:38:13.4333831Z           [32m+[0m [0m[1m[0mfailed_request_tracing_enabled[0m[0m  = (known after apply)
+2021-12-15T20:38:13.4334108Z 
+2021-12-15T20:38:13.4334424Z           [32m+[0m [0mapplication_logs {
+2021-12-15T20:38:13.4334896Z               [32m+[0m [0m[1m[0mfile_system_level[0m[0m = (known after apply)
+2021-12-15T20:38:13.4335154Z 
+2021-12-15T20:38:13.4335476Z               [32m+[0m [0mazure_blob_storage {
+2021-12-15T20:38:13.4336004Z                   [32m+[0m [0m[1m[0mlevel[0m[0m             = (known after apply)
+2021-12-15T20:38:13.4337705Z                   [32m+[0m [0m[1m[0mretention_in_days[0m[0m = (known after apply)
+2021-12-15T20:38:13.4340589Z                   [32m+[0m [0m[1m[0msas_url[0m[0m           = (sensitive value)
+2021-12-15T20:38:13.4341397Z                 }
+2021-12-15T20:38:13.4345215Z             }
+2021-12-15T20:38:13.4345479Z 
+2021-12-15T20:38:13.4345831Z           [32m+[0m [0mhttp_logs {
+2021-12-15T20:38:13.4347182Z               [32m+[0m [0mazure_blob_storage {
+2021-12-15T20:38:13.4347701Z                   [32m+[0m [0m[1m[0mretention_in_days[0m[0m = (known after apply)
+2021-12-15T20:38:13.4348473Z                   [32m+[0m [0m[1m[0msas_url[0m[0m           = (sensitive value)
+2021-12-15T20:38:13.4348913Z                 }
+2021-12-15T20:38:13.4349047Z 
+2021-12-15T20:38:13.4349375Z               [32m+[0m [0mfile_system {
+2021-12-15T20:38:13.4349836Z                   [32m+[0m [0m[1m[0mretention_in_days[0m[0m = (known after apply)
+2021-12-15T20:38:13.4350848Z                   [32m+[0m [0m[1m[0mretention_in_mb[0m[0m   = (known after apply)
+2021-12-15T20:38:13.4351330Z                 }
+2021-12-15T20:38:13.4351635Z             }
+2021-12-15T20:38:13.4351927Z         }
+2021-12-15T20:38:13.4352047Z 
+2021-12-15T20:38:13.4352356Z       [32m+[0m [0msite_config {
+2021-12-15T20:38:13.4352826Z           [32m+[0m [0m[1m[0macr_use_managed_identity_credentials[0m[0m = (known after apply)
+2021-12-15T20:38:13.4353487Z           [32m+[0m [0m[1m[0macr_user_managed_identity_client_id[0m[0m  = (known after apply)
+2021-12-15T20:38:13.4354076Z           [32m+[0m [0m[1m[0malways_on[0m[0m                            = (known after apply)
+2021-12-15T20:38:13.4354653Z           [32m+[0m [0m[1m[0mapp_command_line[0m[0m                     = (known after apply)
+2021-12-15T20:38:13.4355228Z           [32m+[0m [0m[1m[0mauto_swap_slot_name[0m[0m                  = (known after apply)
+2021-12-15T20:38:13.4355809Z           [32m+[0m [0m[1m[0mdefault_documents[0m[0m                    = (known after apply)
+2021-12-15T20:38:13.4357443Z           [32m+[0m [0m[1m[0mdotnet_framework_version[0m[0m             = (known after apply)
+2021-12-15T20:38:13.4358055Z           [32m+[0m [0m[1m[0mftps_state[0m[0m                           = (known after apply)
+2021-12-15T20:38:13.4358638Z           [32m+[0m [0m[1m[0mhealth_check_path[0m[0m                    = (known after apply)
+2021-12-15T20:38:13.4359212Z           [32m+[0m [0m[1m[0mhttp2_enabled[0m[0m                        = (known after apply)
+2021-12-15T20:38:13.4359784Z           [32m+[0m [0m[1m[0mip_restriction[0m[0m                       = (known after apply)
+2021-12-15T20:38:13.4360856Z           [32m+[0m [0m[1m[0mjava_container[0m[0m                       = (known after apply)
+2021-12-15T20:38:13.4361674Z           [32m+[0m [0m[1m[0mjava_container_version[0m[0m               = (known after apply)
+2021-12-15T20:38:13.4362620Z           [32m+[0m [0m[1m[0mjava_version[0m[0m                         = (known after apply)
+2021-12-15T20:38:13.4363243Z           [32m+[0m [0m[1m[0mlinux_fx_version[0m[0m                     = (known after apply)
+2021-12-15T20:38:13.4363818Z           [32m+[0m [0m[1m[0mlocal_mysql_enabled[0m[0m                  = (known after apply)
+2021-12-15T20:38:13.4364586Z           [32m+[0m [0m[1m[0mmanaged_pipeline_mode[0m[0m                = (known after apply)
+2021-12-15T20:38:13.4365144Z           [32m+[0m [0m[1m[0mmin_tls_version[0m[0m                      = (known after apply)
+2021-12-15T20:38:13.4365719Z           [32m+[0m [0m[1m[0mnumber_of_workers[0m[0m                    = (known after apply)
+2021-12-15T20:38:13.4366297Z           [32m+[0m [0m[1m[0mphp_version[0m[0m                          = (known after apply)
+2021-12-15T20:38:13.4366868Z           [32m+[0m [0m[1m[0mpython_version[0m[0m                       = (known after apply)
+2021-12-15T20:38:13.4367440Z           [32m+[0m [0m[1m[0mremote_debugging_enabled[0m[0m             = (known after apply)
+2021-12-15T20:38:13.4368106Z           [32m+[0m [0m[1m[0mremote_debugging_version[0m[0m             = (known after apply)
+2021-12-15T20:38:13.4368663Z           [32m+[0m [0m[1m[0mscm_ip_restriction[0m[0m                   = (known after apply)
+2021-12-15T20:38:13.4369245Z           [32m+[0m [0m[1m[0mscm_type[0m[0m                             = (known after apply)
+2021-12-15T20:38:13.4369823Z           [32m+[0m [0m[1m[0mscm_use_main_ip_restriction[0m[0m          = (known after apply)
+2021-12-15T20:38:13.4370896Z           [32m+[0m [0m[1m[0muse_32_bit_worker_process[0m[0m            = (known after apply)
+2021-12-15T20:38:13.4371522Z           [32m+[0m [0m[1m[0mvnet_route_all_enabled[0m[0m               = (known after apply)
+2021-12-15T20:38:13.4372078Z           [32m+[0m [0m[1m[0mwebsockets_enabled[0m[0m                   = (known after apply)
+2021-12-15T20:38:13.4372668Z           [32m+[0m [0m[1m[0mwindows_fx_version[0m[0m                   = (known after apply)
+2021-12-15T20:38:13.4372946Z 
+2021-12-15T20:38:13.4373238Z           [32m+[0m [0mcors {
+2021-12-15T20:38:13.4373692Z               [32m+[0m [0m[1m[0mallowed_origins[0m[0m     = (known after apply)
+2021-12-15T20:38:13.4374245Z               [32m+[0m [0m[1m[0msupport_credentials[0m[0m = (known after apply)
+2021-12-15T20:38:13.4375671Z             }
+2021-12-15T20:38:13.4375997Z         }
+2021-12-15T20:38:13.4376118Z 
+2021-12-15T20:38:13.4376434Z       [32m+[0m [0msource_control {
+2021-12-15T20:38:13.4376873Z           [32m+[0m [0m[1m[0mbranch[0m[0m             = (known after apply)
+2021-12-15T20:38:13.4377395Z           [32m+[0m [0m[1m[0mmanual_integration[0m[0m = (known after apply)
+2021-12-15T20:38:13.4377915Z           [32m+[0m [0m[1m[0mrepo_url[0m[0m           = (known after apply)
+2021-12-15T20:38:13.4378435Z           [32m+[0m [0m[1m[0mrollback_enabled[0m[0m   = (known after apply)
+2021-12-15T20:38:13.4378965Z           [32m+[0m [0m[1m[0muse_mercurial[0m[0m      = (known after apply)
+2021-12-15T20:38:13.4379351Z         }
+2021-12-15T20:38:13.4379485Z 
+2021-12-15T20:38:13.4379784Z       [32m+[0m [0mstorage_account {
+2021-12-15T20:38:13.4380613Z           [32m+[0m [0m[1m[0maccess_key[0m[0m   = (sensitive value)
+2021-12-15T20:38:13.4381427Z           [32m+[0m [0m[1m[0maccount_name[0m[0m = (known after apply)
+2021-12-15T20:38:13.4382302Z           [32m+[0m [0m[1m[0mmount_path[0m[0m   = (known after apply)
+2021-12-15T20:38:13.4382832Z           [32m+[0m [0m[1m[0mname[0m[0m         = (known after apply)
+2021-12-15T20:38:13.4383316Z           [32m+[0m [0m[1m[0mshare_name[0m[0m   = (known after apply)
+2021-12-15T20:38:13.4383819Z           [32m+[0m [0m[1m[0mtype[0m[0m         = (known after apply)
+2021-12-15T20:38:13.4384207Z         }
+2021-12-15T20:38:13.4384486Z     }
+2021-12-15T20:38:13.4384613Z 
+2021-12-15T20:38:13.4385014Z [1m  # module.appservice.azurerm_app_service_plan.test[0m will be created[0m[0m
+2021-12-15T20:38:13.4385526Z [0m  [32m+[0m[0m resource "azurerm_app_service_plan" "test" {
+2021-12-15T20:38:13.4386038Z       [32m+[0m [0m[1m[0mid[0m[0m                           = (known after apply)
+2021-12-15T20:38:13.4386727Z       [32m+[0m [0m[1m[0mkind[0m[0m                         = "Windows"
+2021-12-15T20:38:13.4387236Z       [32m+[0m [0m[1m[0mlocation[0m[0m                     = "eastus"
+2021-12-15T20:38:13.4387764Z       [32m+[0m [0m[1m[0mmaximum_elastic_worker_count[0m[0m = (known after apply)
+2021-12-15T20:38:13.4388308Z       [32m+[0m [0m[1m[0mmaximum_number_of_workers[0m[0m    = (known after apply)
+2021-12-15T20:38:13.4388889Z       [32m+[0m [0m[1m[0mname[0m[0m                         = "myApplicationUdacityDemoPkesar-AppService"
+2021-12-15T20:38:13.4389428Z       [32m+[0m [0m[1m[0mresource_group_name[0m[0m          = "rg"
+2021-12-15T20:38:13.4389755Z 
+2021-12-15T20:38:13.4390042Z       [32m+[0m [0msku {
+2021-12-15T20:38:13.4391101Z           [32m+[0m [0m[1m[0mcapacity[0m[0m = (known after apply)
+2021-12-15T20:38:13.4391670Z           [32m+[0m [0m[1m[0msize[0m[0m     = "F1"
+2021-12-15T20:38:13.4392120Z           [32m+[0m [0m[1m[0mtier[0m[0m     = "Free"
+2021-12-15T20:38:13.4392500Z         }
+2021-12-15T20:38:13.4392765Z     }
+2021-12-15T20:38:13.4392895Z 
+2021-12-15T20:38:13.4393255Z [1m  # module.network.azurerm_subnet.test[0m will be created[0m[0m
+2021-12-15T20:38:13.4393728Z [0m  [32m+[0m[0m resource "azurerm_subnet" "test" {
+2021-12-15T20:38:13.4394255Z       [32m+[0m [0m[1m[0maddress_prefix[0m[0m                                 = (known after apply)
+2021-12-15T20:38:13.4394828Z       [32m+[0m [0m[1m[0maddress_prefixes[0m[0m                               = [
+2021-12-15T20:38:13.4395441Z           [32m+[0m [0m"10.0.1.0/24",
+2021-12-15T20:38:13.4395761Z         ]
+2021-12-15T20:38:13.4396358Z       [32m+[0m [0m[1m[0menforce_private_link_endpoint_network_policies[0m[0m = false
+2021-12-15T20:38:13.4396919Z       [32m+[0m [0m[1m[0menforce_private_link_service_network_policies[0m[0m  = false
+2021-12-15T20:38:13.4397497Z       [32m+[0m [0m[1m[0mid[0m[0m                                             = (known after apply)
+2021-12-15T20:38:13.4398136Z       [32m+[0m [0m[1m[0mname[0m[0m                                           = "myApplicationUdacityDemoPkesar-NET-sub"
+2021-12-15T20:38:13.4398744Z       [32m+[0m [0m[1m[0mresource_group_name[0m[0m                            = "rg"
+2021-12-15T20:38:13.4399331Z       [32m+[0m [0m[1m[0mvirtual_network_name[0m[0m                           = "myApplicationUdacityDemoPkesar-NET"
+2021-12-15T20:38:13.4399793Z     }
+2021-12-15T20:38:13.4399905Z 
+2021-12-15T20:38:13.4400701Z [1m  # module.network.azurerm_virtual_network.test[0m will be created[0m[0m
+2021-12-15T20:38:13.4401692Z [0m  [32m+[0m[0m resource "azurerm_virtual_network" "test" {
+2021-12-15T20:38:13.4402577Z       [32m+[0m [0m[1m[0maddress_space[0m[0m         = [
+2021-12-15T20:38:13.4403284Z           [32m+[0m [0m"10.0.1.0/24",
+2021-12-15T20:38:13.4403918Z         ]
+2021-12-15T20:38:13.4404688Z       [32m+[0m [0m[1m[0mdns_servers[0m[0m           = (known after apply)
+2021-12-15T20:38:13.4405642Z       [32m+[0m [0m[1m[0mguid[0m[0m                  = (known after apply)
+2021-12-15T20:38:13.4406431Z       [32m+[0m [0m[1m[0mid[0m[0m                    = (known after apply)
+2021-12-15T20:38:13.4406935Z       [32m+[0m [0m[1m[0mlocation[0m[0m              = "eastus"
+2021-12-15T20:38:13.4407448Z       [32m+[0m [0m[1m[0mname[0m[0m                  = "myApplicationUdacityDemoPkesar-NET"
+2021-12-15T20:38:13.4407974Z       [32m+[0m [0m[1m[0mresource_group_name[0m[0m   = "rg"
+2021-12-15T20:38:13.4408476Z       [32m+[0m [0m[1m[0msubnet[0m[0m                = (known after apply)
+2021-12-15T20:38:13.4408988Z       [32m+[0m [0m[1m[0mvm_protection_enabled[0m[0m = false
+2021-12-15T20:38:13.4409507Z     }
+2021-12-15T20:38:13.4409789Z 
+2021-12-15T20:38:13.4410441Z [1m  # module.nsg-test.azurerm_network_security_group.nsg[0m will be created[0m[0m
+2021-12-15T20:38:13.4411026Z [0m  [32m+[0m[0m resource "azurerm_network_security_group" "nsg" {
+2021-12-15T20:38:13.4412156Z       [32m+[0m [0m[1m[0mid[0m[0m                  = (known after apply)
+2021-12-15T20:38:13.4412789Z       [32m+[0m [0m[1m[0mlocation[0m[0m            = "eastus"
+2021-12-15T20:38:13.4413322Z       [32m+[0m [0m[1m[0mname[0m[0m                = "myApplicationUdacityDemoPkesar-NSG"
+2021-12-15T20:38:13.4413838Z       [32m+[0m [0m[1m[0mresource_group_name[0m[0m = "rg"
+2021-12-15T20:38:13.4414301Z       [32m+[0m [0m[1m[0msecurity_rule[0m[0m       = [
+2021-12-15T20:38:13.4414682Z           [32m+[0m [0m{
+2021-12-15T20:38:13.4415122Z               [32m+[0m [0maccess                                     = "Allow"
+2021-12-15T20:38:13.4415799Z               [32m+[0m [0mdescription                                = ""
+2021-12-15T20:38:13.4416309Z               [32m+[0m [0mdestination_address_prefix                 = "*"
+2021-12-15T20:38:13.4416817Z               [32m+[0m [0mdestination_address_prefixes               = []
+2021-12-15T20:38:13.4417603Z               [32m+[0m [0mdestination_application_security_group_ids = []
+2021-12-15T20:38:13.4418114Z               [32m+[0m [0mdestination_port_range                     = "22"
+2021-12-15T20:38:13.4418752Z               [32m+[0m [0mdestination_port_ranges                    = []
+2021-12-15T20:38:13.4419237Z               [32m+[0m [0mdirection                                  = "Inbound"
+2021-12-15T20:38:13.4419738Z               [32m+[0m [0mname                                       = "SSH"
+2021-12-15T20:38:13.4420608Z               [32m+[0m [0mpriority                                   = 1001
+2021-12-15T20:38:13.4421418Z               [32m+[0m [0mprotocol                                   = "Tcp"
+2021-12-15T20:38:13.4421938Z               [32m+[0m [0msource_address_prefix                      = "*"
+2021-12-15T20:38:13.4422448Z               [32m+[0m [0msource_address_prefixes                    = []
+2021-12-15T20:38:13.4422969Z               [32m+[0m [0msource_application_security_group_ids      = []
+2021-12-15T20:38:13.4423461Z               [32m+[0m [0msource_port_range                          = "*"
+2021-12-15T20:38:13.4425670Z               [32m+[0m [0msource_port_ranges                         = []
+2021-12-15T20:38:13.4426085Z             },
+2021-12-15T20:38:13.4426410Z           [32m+[0m [0m{
+2021-12-15T20:38:13.4426849Z               [32m+[0m [0maccess                                     = "Allow"
+2021-12-15T20:38:13.4427346Z               [32m+[0m [0mdescription                                = ""
+2021-12-15T20:38:13.4427996Z               [32m+[0m [0mdestination_address_prefix                 = "*"
+2021-12-15T20:38:13.4428500Z               [32m+[0m [0mdestination_address_prefixes               = []
+2021-12-15T20:38:13.4428993Z               [32m+[0m [0mdestination_application_security_group_ids = []
+2021-12-15T20:38:13.4429484Z               [32m+[0m [0mdestination_port_range                     = "5000"
+2021-12-15T20:38:13.4429965Z               [32m+[0m [0mdestination_port_ranges                    = []
+2021-12-15T20:38:13.4431008Z               [32m+[0m [0mdirection                                  = "Inbound"
+2021-12-15T20:38:13.4431788Z               [32m+[0m [0mname                                       = "myApplicationUdacityDemoPkesar-NSG-5000"
+2021-12-15T20:38:13.4432762Z               [32m+[0m [0mpriority                                   = 100
+2021-12-15T20:38:13.4433280Z               [32m+[0m [0mprotocol                                   = "Tcp"
+2021-12-15T20:38:13.4433791Z               [32m+[0m [0msource_address_prefix                      = "10.0.1.0/24"
+2021-12-15T20:38:13.4434339Z               [32m+[0m [0msource_address_prefixes                    = []
+2021-12-15T20:38:13.4434848Z               [32m+[0m [0msource_application_security_group_ids      = []
+2021-12-15T20:38:13.4435359Z               [32m+[0m [0msource_port_range                          = "*"
+2021-12-15T20:38:13.4436046Z               [32m+[0m [0msource_port_ranges                         = []
+2021-12-15T20:38:13.4436447Z             },
+2021-12-15T20:38:13.4436722Z         ]
+2021-12-15T20:38:13.4437005Z     }
+2021-12-15T20:38:13.4437120Z 
+2021-12-15T20:38:13.4437560Z [1m  # module.nsg-test.azurerm_subnet_network_security_group_association.test[0m will be created[0m[0m
+2021-12-15T20:38:13.4438312Z [0m  [32m+[0m[0m resource "azurerm_subnet_network_security_group_association" "test" {
+2021-12-15T20:38:13.4438844Z       [32m+[0m [0m[1m[0mid[0m[0m                        = (known after apply)
+2021-12-15T20:38:13.4439445Z       [32m+[0m [0m[1m[0mnetwork_security_group_id[0m[0m = (known after apply)
+2021-12-15T20:38:13.4439948Z       [32m+[0m [0m[1m[0msubnet_id[0m[0m                 = (known after apply)
+2021-12-15T20:38:13.4440824Z     }
+2021-12-15T20:38:13.4440960Z 
+2021-12-15T20:38:13.4441342Z [1m  # module.publicip.azurerm_public_ip.test[0m will be created[0m[0m
+2021-12-15T20:38:13.4441823Z [0m  [32m+[0m[0m resource "azurerm_public_ip" "test" {
+2021-12-15T20:38:13.4442279Z       [32m+[0m [0m[1m[0mallocation_method[0m[0m       = "Dynamic"
+2021-12-15T20:38:13.4443952Z       [32m+[0m [0m[1m[0mavailability_zone[0m[0m       = (known after apply)
+2021-12-15T20:38:13.4444937Z       [32m+[0m [0m[1m[0mfqdn[0m[0m                    = (known after apply)
+2021-12-15T20:38:13.4445824Z       [32m+[0m [0m[1m[0mid[0m[0m                      = (known after apply)
+2021-12-15T20:38:13.4447742Z       [32m+[0m [0m[1m[0midle_timeout_in_minutes[0m[0m = 4
+2021-12-15T20:38:13.4448627Z       [32m+[0m [0m[1m[0mip_address[0m[0m              = (known after apply)
+2021-12-15T20:38:13.4450487Z       [32m+[0m [0m[1m[0mip_version[0m[0m              = "IPv4"
+2021-12-15T20:38:13.4451376Z       [32m+[0m [0m[1m[0mlocation[0m[0m                = "eastus"
+2021-12-15T20:38:13.4453319Z       [32m+[0m [0m[1m[0mname[0m[0m                    = "myApplicationUdacityDemoPkesar-publicip-pubip"
+2021-12-15T20:38:13.4454297Z       [32m+[0m [0m[1m[0mresource_group_name[0m[0m     = "rg"
+2021-12-15T20:38:13.4456103Z       [32m+[0m [0m[1m[0msku[0m[0m                     = "Basic"
+2021-12-15T20:38:13.4457682Z       [32m+[0m [0m[1m[0msku_tier[0m[0m                = "Regional"
+2021-12-15T20:38:13.4458663Z       [32m+[0m [0m[1m[0mzones[0m[0m                   = (known after apply)
+2021-12-15T20:38:13.4460462Z     }
+2021-12-15T20:38:13.4460700Z 
+2021-12-15T20:38:13.4461388Z [1m  # module.resource_group.azurerm_resource_group.test[0m will be created[0m[0m
+2021-12-15T20:38:13.4463373Z [0m  [32m+[0m[0m resource "azurerm_resource_group" "test" {
+2021-12-15T20:38:13.4464208Z       [32m+[0m [0m[1m[0mid[0m[0m       = (known after apply)
+2021-12-15T20:38:13.4465866Z       [32m+[0m [0m[1m[0mlocation[0m[0m = "eastus"
+2021-12-15T20:38:13.4466685Z       [32m+[0m [0m[1m[0mname[0m[0m     = "rg"
+2021-12-15T20:38:13.4467269Z     }
+2021-12-15T20:38:13.4467486Z 
+2021-12-15T20:38:13.4469081Z [1m  # module.vm.azurerm_linux_virtual_machine.main[0m will be created[0m[0m
+2021-12-15T20:38:13.4469993Z [0m  [32m+[0m[0m resource "azurerm_linux_virtual_machine" "main" {
+2021-12-15T20:38:13.4471912Z       [32m+[0m [0m[1m[0madmin_username[0m[0m                  = "testadmin"
+2021-12-15T20:38:13.4472861Z       [32m+[0m [0m[1m[0mallow_extension_operations[0m[0m      = true
+2021-12-15T20:38:13.4473782Z       [32m+[0m [0m[1m[0mcomputer_name[0m[0m                   = (known after apply)
+2021-12-15T20:38:13.4474683Z       [32m+[0m [0m[1m[0mdisable_password_authentication[0m[0m = true
+2021-12-15T20:38:13.4475566Z       [32m+[0m [0m[1m[0mextensions_time_budget[0m[0m          = "PT1H30M"
+2021-12-15T20:38:13.4476492Z       [32m+[0m [0m[1m[0mid[0m[0m                              = (known after apply)
+2021-12-15T20:38:13.4478568Z       [32m+[0m [0m[1m[0mlocation[0m[0m                        = "eastus"
+2021-12-15T20:38:13.4479501Z       [32m+[0m [0m[1m[0mmax_bid_price[0m[0m                   = -1
+2021-12-15T20:38:13.4480375Z       [32m+[0m [0m[1m[0mname[0m[0m                            = "rg-vm"
+2021-12-15T20:38:13.4481268Z       [32m+[0m [0m[1m[0mnetwork_interface_ids[0m[0m           = (known after apply)
+2021-12-15T20:38:13.4482202Z       [32m+[0m [0m[1m[0mpatch_mode[0m[0m                      = "ImageDefault"
+2021-12-15T20:38:13.4483095Z       [32m+[0m [0m[1m[0mplatform_fault_domain[0m[0m           = -1
+2021-12-15T20:38:13.4484315Z       [32m+[0m [0m[1m[0mpriority[0m[0m                        = "Regular"
+2021-12-15T20:38:13.4485330Z       [32m+[0m [0m[1m[0mprivate_ip_address[0m[0m              = (known after apply)
+2021-12-15T20:38:13.4486547Z       [32m+[0m [0m[1m[0mprivate_ip_addresses[0m[0m            = (known after apply)
+2021-12-15T20:38:13.4487469Z       [32m+[0m [0m[1m[0mprovision_vm_agent[0m[0m              = true
+2021-12-15T20:38:13.4488404Z       [32m+[0m [0m[1m[0mpublic_ip_address[0m[0m               = (known after apply)
+2021-12-15T20:38:13.4489338Z       [32m+[0m [0m[1m[0mpublic_ip_addresses[0m[0m             = (known after apply)
+2021-12-15T20:38:13.4490257Z       [32m+[0m [0m[1m[0mresource_group_name[0m[0m             = "rg"
+2021-12-15T20:38:13.4491124Z       [32m+[0m [0m[1m[0msize[0m[0m                            = "Standard_B1s"
+2021-12-15T20:38:13.4492036Z       [32m+[0m [0m[1m[0mvirtual_machine_id[0m[0m              = (known after apply)
+2021-12-15T20:38:13.4492973Z       [32m+[0m [0m[1m[0mzone[0m[0m                            = (known after apply)
+2021-12-15T20:38:13.4493394Z 
+2021-12-15T20:38:13.4493944Z       [32m+[0m [0madmin_ssh_key {
+2021-12-15T20:38:13.4494680Z           [32m+[0m [0m[1m[0mpublic_key[0m[0m = <<-EOT
+2021-12-15T20:38:13.4497293Z                 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC6r0LwnM0Zy+gmBOBZjpYfLT6T3RrDvpIUZHSa1s3WV/4BDV3eRz8d0LCwxHKCzkQhFpclp25gyOjH0yd/GdmWFLeOHz/ZAPnxUC0UzmtgGo9JOe8jSBBEHoM0gaCqZAAW8oxjlPAGYn35O6BD/7SZcko7JojofrJ/YkljKLu0XLkn8m4Pf8Uf4o7QZi/UmcrRbGcWnaRMFy/d1Ez8qpXH324J5RrM8tZ5bitrLXDXXV4h4NbGS1WJuafziDMyC7zEfwAgcs3QkEhfFxwKCO4Tmx5pdT9bcTymW/ih5u5WjswbblbwIvbpR3qkJ9ryUS5iAgsBBxrzf2E7CKGpu1JL5XHVmM2+08L/DQQxuw7jvY+Vb9lBiPpjeb4DTOt7w5EkQ94Cs+t7tf4S0L4G7UwdWnCrMuDivVew8f1ZcKnvOsPWL5qa8sRjQ07IaTBYFxqSHTpylrFWPToP/+xz5sa5uc/DAe76f4mFkEz9Liy2/kcdSN83mc1vjGFZYDwE7Y/UDjsHr63Re7G1qtiqjG2zqxuKPcYX7vSpPCS+N3a8y3n2zuWRSlHEWb3s/J0U2bYvtZJz2ugQ3PTRs8A5vCsFCPyQvcEon1GYRRHIbB07/y6NPcHjHnkm3MmMCrCmoYA/ItB+STKrG6+WteVCrgIt5iEYzdd30DW+PZKmYJ8MRw== azureuser@myserver
+2021-12-15T20:38:13.4499728Z             EOT
+2021-12-15T20:38:13.4500409Z           [32m+[0m [0m[1m[0musername[0m[0m   = "testadmin"
+2021-12-15T20:38:13.4501080Z         }
+2021-12-15T20:38:13.4501291Z 
+2021-12-15T20:38:13.4501823Z       [32m+[0m [0mos_disk {
+2021-12-15T20:38:13.4502596Z           [32m+[0m [0m[1m[0mcaching[0m[0m                   = "ReadWrite"
+2021-12-15T20:38:13.4503469Z           [32m+[0m [0m[1m[0mdisk_size_gb[0m[0m              = (known after apply)
+2021-12-15T20:38:13.4504348Z           [32m+[0m [0m[1m[0mname[0m[0m                      = (known after apply)
+2021-12-15T20:38:13.4505236Z           [32m+[0m [0m[1m[0mstorage_account_type[0m[0m      = "Standard_LRS"
+2021-12-15T20:38:13.4506077Z           [32m+[0m [0m[1m[0mwrite_accelerator_enabled[0m[0m = false
+2021-12-15T20:38:13.4506716Z         }
+2021-12-15T20:38:13.4506923Z 
+2021-12-15T20:38:13.4507490Z       [32m+[0m [0msource_image_reference {
+2021-12-15T20:38:13.4508210Z           [32m+[0m [0m[1m[0moffer[0m[0m     = "UbuntuServer"
+2021-12-15T20:38:13.4508954Z           [32m+[0m [0m[1m[0mpublisher[0m[0m = "Canonical"
+2021-12-15T20:38:13.4509698Z           [32m+[0m [0m[1m[0msku[0m[0m       = "16.04-LTS"
+2021-12-15T20:38:13.4511613Z           [32m+[0m [0m[1m[0mversion[0m[0m   = "latest"
+2021-12-15T20:38:13.4512222Z         }
+2021-12-15T20:38:13.4512683Z     }
+2021-12-15T20:38:13.4512869Z 
+2021-12-15T20:38:13.4513657Z [1m  # module.vm.azurerm_network_interface.main[0m will be created[0m[0m
+2021-12-15T20:38:13.4514455Z [0m  [32m+[0m[0m resource "azurerm_network_interface" "main" {
+2021-12-15T20:38:13.4515274Z       [32m+[0m [0m[1m[0mapplied_dns_servers[0m[0m           = (known after apply)
+2021-12-15T20:38:13.4516167Z       [32m+[0m [0m[1m[0mdns_servers[0m[0m                   = (known after apply)
+2021-12-15T20:38:13.4517007Z       [32m+[0m [0m[1m[0menable_accelerated_networking[0m[0m = false
+2021-12-15T20:38:13.4517961Z       [32m+[0m [0m[1m[0menable_ip_forwarding[0m[0m          = false
+2021-12-15T20:38:13.4518861Z       [32m+[0m [0m[1m[0mid[0m[0m                            = (known after apply)
+2021-12-15T20:38:13.4519797Z       [32m+[0m [0m[1m[0minternal_dns_name_label[0m[0m       = (known after apply)
+2021-12-15T20:38:13.4520759Z       [32m+[0m [0m[1m[0minternal_domain_name_suffix[0m[0m   = (known after apply)
+2021-12-15T20:38:13.4521628Z       [32m+[0m [0m[1m[0mlocation[0m[0m                      = "eastus"
+2021-12-15T20:38:13.4522458Z       [32m+[0m [0m[1m[0mmac_address[0m[0m                   = (known after apply)
+2021-12-15T20:38:13.4523363Z       [32m+[0m [0m[1m[0mname[0m[0m                          = "Kesarwani-NetInterface"
+2021-12-15T20:38:13.4524088Z       [32m+[0m [0m[1m[0mprivate_ip_address[0m[0m            = (known after apply)
+2021-12-15T20:38:13.4524646Z       [32m+[0m [0m[1m[0mprivate_ip_addresses[0m[0m          = (known after apply)
+2021-12-15T20:38:13.4525178Z       [32m+[0m [0m[1m[0mresource_group_name[0m[0m           = "rg"
+2021-12-15T20:38:13.4525700Z       [32m+[0m [0m[1m[0mvirtual_machine_id[0m[0m            = (known after apply)
+2021-12-15T20:38:13.4525942Z 
+2021-12-15T20:38:13.4526271Z       [32m+[0m [0mip_configuration {
+2021-12-15T20:38:13.4526786Z           [32m+[0m [0m[1m[0mgateway_load_balancer_frontend_ip_configuration_id[0m[0m = (known after apply)
+2021-12-15T20:38:13.4527402Z           [32m+[0m [0m[1m[0mname[0m[0m                                               = "internal"
+2021-12-15T20:38:13.4528010Z           [32m+[0m [0m[1m[0mprimary[0m[0m                                            = (known after apply)
+2021-12-15T20:38:13.4528763Z           [32m+[0m [0m[1m[0mprivate_ip_address[0m[0m                                 = (known after apply)
+2021-12-15T20:38:13.4529349Z           [32m+[0m [0m[1m[0mprivate_ip_address_allocation[0m[0m                      = "dynamic"
+2021-12-15T20:38:13.4529924Z           [32m+[0m [0m[1m[0mprivate_ip_address_version[0m[0m                         = "IPv4"
+2021-12-15T20:38:13.4531879Z           [32m+[0m [0m[1m[0mpublic_ip_address_id[0m[0m                               = (known after apply)
+2021-12-15T20:38:13.4534176Z           [32m+[0m [0m[1m[0msubnet_id[0m[0m                                          = (known after apply)
+2021-12-15T20:38:13.4534907Z         }
+2021-12-15T20:38:13.4535390Z     }
+2021-12-15T20:38:13.4535628Z 
+2021-12-15T20:38:13.4536209Z [0m[1mPlan:[0m 10 to add, 0 to change, 0 to destroy.
+2021-12-15T20:38:19.9413763Z [0m[0m[1mmodule.resource_group.azurerm_resource_group.test: Creating...[0m[0m
+2021-12-15T20:38:20.3050606Z [0m[1mmodule.resource_group.azurerm_resource_group.test: Creation complete after 0s [id=/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg][0m
+2021-12-15T20:38:20.3141070Z [0m[1mmodule.appservice.azurerm_app_service_plan.test: Creating...[0m[0m
+2021-12-15T20:38:20.3180485Z [0m[1mmodule.network.azurerm_virtual_network.test: Creating...[0m[0m
+2021-12-15T20:38:20.3280886Z [0m[1mmodule.publicip.azurerm_public_ip.test: Creating...[0m[0m
+2021-12-15T20:38:20.3370141Z [0m[1mmodule.nsg-test.azurerm_network_security_group.nsg: Creating...[0m[0m
+2021-12-15T20:38:21.9957184Z [0m[1mmodule.publicip.azurerm_public_ip.test: Creation complete after 2s [id=/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/publicIPAddresses/myApplicationUdacityDemoPkesar-publicip-pubip][0m
+2021-12-15T20:38:24.1039165Z [0m[1mmodule.nsg-test.azurerm_network_security_group.nsg: Creation complete after 4s [id=/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/networkSecurityGroups/myApplicationUdacityDemoPkesar-NSG][0m
+2021-12-15T20:38:24.2094336Z [0m[1mmodule.network.azurerm_virtual_network.test: Creation complete after 4s [id=/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myApplicationUdacityDemoPkesar-NET][0m
+2021-12-15T20:38:24.2212660Z [0m[1mmodule.network.azurerm_subnet.test: Creating...[0m[0m
+2021-12-15T20:38:24.9389769Z [0m[1mmodule.appservice.azurerm_app_service_plan.test: Creation complete after 5s [id=/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Web/serverfarms/myApplicationUdacityDemoPkesar-AppService][0m
+2021-12-15T20:38:24.9490609Z [0m[1mmodule.appservice.azurerm_app_service.test: Creating...[0m[0m
+2021-12-15T20:38:27.6915880Z [0m[1mmodule.network.azurerm_subnet.test: Creation complete after 4s [id=/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myApplicationUdacityDemoPkesar-NET/subnets/myApplicationUdacityDemoPkesar-NET-sub][0m
+2021-12-15T20:38:27.7012563Z [0m[1mmodule.nsg-test.azurerm_subnet_network_security_group_association.test: Creating...[0m[0m
+2021-12-15T20:38:27.7035749Z [0m[1mmodule.vm.azurerm_network_interface.main: Creating...[0m[0m
+2021-12-15T20:38:31.1265897Z [0m[1mmodule.nsg-test.azurerm_subnet_network_security_group_association.test: Creation complete after 3s [id=/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myApplicationUdacityDemoPkesar-NET/subnets/myApplicationUdacityDemoPkesar-NET-sub][0m
+2021-12-15T20:38:32.3704896Z [0m[1mmodule.vm.azurerm_network_interface.main: Creation complete after 4s [id=/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Network/networkInterfaces/Kesarwani-NetInterface][0m
+2021-12-15T20:38:32.3831288Z [0m[1mmodule.vm.azurerm_linux_virtual_machine.main: Creating...[0m[0m
+2021-12-15T20:38:34.9513110Z [0m[1mmodule.appservice.azurerm_app_service.test: Still creating... [10s elapsed][0m[0m
+2021-12-15T20:38:42.3837226Z [0m[1mmodule.vm.azurerm_linux_virtual_machine.main: Still creating... [10s elapsed][0m[0m
+2021-12-15T20:38:44.9518821Z [0m[1mmodule.appservice.azurerm_app_service.test: Still creating... [20s elapsed][0m[0m
+2021-12-15T20:38:52.3849088Z [0m[1mmodule.vm.azurerm_linux_virtual_machine.main: Still creating... [20s elapsed][0m[0m
+2021-12-15T20:38:54.9526620Z [0m[1mmodule.appservice.azurerm_app_service.test: Still creating... [30s elapsed][0m[0m
+2021-12-15T20:39:02.3848054Z [0m[1mmodule.vm.azurerm_linux_virtual_machine.main: Still creating... [30s elapsed][0m[0m
+2021-12-15T20:39:04.9546503Z [0m[1mmodule.appservice.azurerm_app_service.test: Still creating... [40s elapsed][0m[0m
+2021-12-15T20:39:12.3874292Z [0m[1mmodule.vm.azurerm_linux_virtual_machine.main: Still creating... [40s elapsed][0m[0m
+2021-12-15T20:39:14.9546319Z [0m[1mmodule.appservice.azurerm_app_service.test: Still creating... [50s elapsed][0m[0m
+2021-12-15T20:39:19.2488596Z [0m[1mmodule.vm.azurerm_linux_virtual_machine.main: Creation complete after 47s [id=/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Compute/virtualMachines/rg-vm][0m
+2021-12-15T20:39:21.5877066Z [0m[1mmodule.appservice.azurerm_app_service.test: Creation complete after 57s [id=/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/rg/providers/Microsoft.Web/sites/myApplicationUdacityDemoPkesar-AppService][0m
+2021-12-15T20:39:21.6917223Z [0m[1m[32m
+2021-12-15T20:39:21.6918374Z Apply complete! Resources: 10 added, 0 changed, 0 destroyed.
+2021-12-15T20:39:23.6201717Z ##[section]Finishing: Terraform : apply
