@@ -17,9 +17,9 @@ Test Passed
  Once the build pipeline ran successfull we will build the push triggerd release pipeline
  
  
-Create Release and Ran build Pipeline
+Createed build Pipeline
 
-![Create Release Pipeline](https://github.com/pikukesar/TerraformFInalproject/blob/main/Screen%20Shots/Created%20and%20Ran%20Build%20PipeLine.png)
+![Create build Pipeline](https://github.com/pikukesar/TerraformFInalproject/blob/main/Screen%20Shots/Created%20and%20Ran%20Build%20PipeLine.png)
  
  
 Successfully Ran Release Pipeline
