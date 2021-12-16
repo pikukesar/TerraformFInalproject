@@ -60,4 +60,6 @@ Final Submissing for code
  
  ![Application Running on the Webapp service ](https://github.com/pikukesar/TerraformFInalproject/blob/main/Screen%20Shots/Application%20Running%20on%20the%20Webapp%20service.png)
  
+ ## Postman test
  
+ ![Application Running on the Webapp service ](https://github.com/pikukesar/TerraformFInalproject/blob/main/Postman/Postman.png)
